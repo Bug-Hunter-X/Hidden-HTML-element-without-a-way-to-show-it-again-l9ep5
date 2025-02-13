@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+<style>
+  #myDiv { display: block; }
+</style>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+  <button onclick="showDiv()">Show Div</button>
+
+  <script>
+    let isVisible = true;
+    function myFunction() {
+      document.getElementById("myDiv").style.display = "none";
+      isVisible = false;
+    }
+    function showDiv(){
+        document.getElementById("myDiv").style.display = "block";
+        isVisible = true;
+    }
+  </script>
+</body>
+</html>
